@@ -10,12 +10,13 @@ Consumed as a git dependency (not published to npm). `eslint` is a peer
 dependency — each project installs its own.
 
 ```jsonc
-// development, linked live as a sibling directory:
-"@perkycrow/eslint_config": "portal:../eslint_config"
-
-// locked to a tagged version:
-"@perkycrow/eslint_config": "git+ssh://git@github.com/perkycrow/eslint_config.git#v0.1.0"
+// locked to a tagged version (public repo — shorthand resolves over HTTPS):
+"@perkycrow/eslint_config": "github:perkycrow/eslint_config#v0.1.0"
 ```
+
+> If the repo is private, the `github:` shorthand needs a token (it fetches over
+> HTTPS). Use `git+ssh://git@github.com/perkycrow/eslint_config.git#v0.1.0` to
+> resolve over your SSH key instead.
 
 ## Usage
 
